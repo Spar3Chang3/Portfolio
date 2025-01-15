@@ -29,14 +29,14 @@
 			height: 10vh;
 
 			width: 100vw;
-      background-color: var(--background-secondary);
+      		background-color: var(--background-secondary);
 			border-bottom: 0.1vh solid var(--banner-accent);
 	}
 
 	.fixed-navbar {
 			position: fixed;
       display: grid;
-      grid-template-columns: 34% 66%;
+      grid-template-columns: 25% 25% 25% 25%;
       grid-template-rows: 1fr;
 
       min-height: 50px;
@@ -48,23 +48,6 @@
 			z-index: 10;
 	}
 
-	.portrait-container {
-			position: relative;
-			display: flex;
-			height: 100%;
-			width: 100%;
-			justify-content: center;
-			align-items: center;
-			padding: 0 10px 10px 10px;
-			object-fit: contain;
-	}
-
-	.portrait-container img {
-			height: clamp(25px, 9vh, 9vh);
-			width: 90%;
-			object-fit: contain;
-	}
-
   .navigation {
 			position: relative;
       display: grid;
@@ -72,7 +55,7 @@
       grid-template-rows: 1fr;
 
       height: 10vh;
-			width: 100%;
+	  width: 100vw;
       flex-grow: 1;
   }
 
@@ -145,32 +128,33 @@
 
 <section class="relative-navbar">
 	<div class="fixed-navbar">
-		<div class="portrait-container">
-			<a href={SiteLinks.landingPage} >
-				<img src={orionLabLogo} alt="Orion Labs Logo">
-			</a>
-		</div>
-		{#if isMobile}
-			<div class="navigation">
-				<div class="button-container">
-					<button class="nav-vis-button" onclick={changeModalState}>☰</button>
-				</div>
-				<div class="navigation-modal">
-					<Modal bind:isOpen={isModalOpen} title={"blank"} showExitButton={false} showTitle={false}>
-						<a href={SiteLinks.about}>About Me</a>
-						<br/>
-						<a href={SiteLinks.portfolio}>portfolio</a>
-						<br/>
-						<a href={SiteLinks.contact}>contact</a>
-					</Modal>
-				</div>
-			</div>
-		{:else}
-			<div class="navigation">
-				<a href={SiteLinks.about}>About Me</a>
-				<a href={SiteLinks.portfolio}>Portfolio</a>
-				<a href={SiteLinks.contact}>Contact</a>
-			</div>
-		{/if}
+		<div class="navigation">
+			<a href={SiteLinks.landingPage}>Home</a>
+			<a href={SiteLinks.about}>About Me</a>
+			<a href={SiteLinks.portfolio}>Portfolio</a>
+			<a href={SiteLinks.contact}>Contact</a>
+		<!--{#if isMobile}-->
+		<!--	<div class="navigation">-->
+		<!--		<div class="button-container">-->
+		<!--			<button class="nav-vis-button" onclick={changeModalState}>☰</button>-->
+		<!--		</div>-->
+		<!--		<div class="navigation-modal">-->
+		<!--			<Modal bind:isOpen={isModalOpen} title={"blank"} showExitButton={false} showTitle={false}>-->
+		<!--				<a href={SiteLinks.about}>About Me</a>-->
+		<!--				<br/>-->
+		<!--				<a href={SiteLinks.portfolio}>portfolio</a>-->
+		<!--				<br/>-->
+		<!--				<a href={SiteLinks.contact}>contact</a>-->
+		<!--			</Modal>-->
+		<!--		</div>-->
+		<!--	</div>-->
+		<!--{:else}-->
+		<!--	<div class="navigation">-->
+		<!--		<a href={SiteLinks.landingPage}>Home</a>-->
+		<!--		<a href={SiteLinks.about}>About Me</a>-->
+		<!--		<a href={SiteLinks.portfolio}>Portfolio</a>-->
+		<!--		<a href={SiteLinks.contact}>Contact</a>-->
+		<!--	</div>-->
+		<!--{/if}-->
 	</div>
 </section>

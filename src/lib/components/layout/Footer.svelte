@@ -96,18 +96,11 @@
 
 	}
 
-		/*@media only screen and (orientation: portrait) {*/
-		/*		.social-shelf a {*/
-		/*				height: 6vw;*/
-		/*				width: 6vw;*/
-		/*		}*/
-		/*}*/
-
 </style>
 
 <section class="footer">
 	<div class="copyright">
-		<p>© 2025 Daryk Baker - All Rights Thought About <br> This site is available for viewing at <a href={SocialLinks.github}>GitHub.com</a></p>
+		<p>© 2025 Daryk Baker - All Rights Thought About <br> This site is available for viewing at <a href={SocialLinks.websiteGit} target="_blank">GitHub.com</a></p>
 	</div>
 	<div class="social-shelf">
 

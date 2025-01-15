@@ -1,0 +1,31 @@
+Qualifications:
+•	Professional experience in device repair including phones, laptops, desktops, and servers
+•	Proficiency in using software such as Microsoft Word, Excel, and the Google suite
+•	Table and Dataframe experience with the languages: Java, Python
+•	Developer experience with the languages: Java, JavaScript, HTML, CSS, JSX
+•	Elementary experience with the languages: C, C++
+Work Experience:
+•	Detasseler for Wibben Detasseling Co. (Seasonal – Every summer of 2019 to 2023)
+•	Store Team Member at Greenview Casey’s (Summer 2021 to early 2022)
+•	Freelance Phone Repair (2020 to Present | (This does not affect my availability)
+•	Freelance Web Development (2024 to Present | (This does not affect my ability)
+•	Tutor and Mentor for Computer Science Intro Courses (Fall 2023)
+•	Field Service Technician for Worldwide TechServices (Fall 2024)
+Field Experience:
+•	System administration including Windows, Ubuntu/Debian, and VirtualBox VMs
+•	Deployment of web, storage, and networking servers
+•	Development of websites and web applications
+•	Embedded devices prototyping with Arduino or other GPIO microcontrollers
+•	Understanding and using the OSI model for categorizing and troubleshooting
+Education:
+•	High School Salutatorian Diploma from Greenview High School (June 2022)
+•	2 Years of Computer Science at Illinois College (2022-24, Associate’s Credit Hours)
+•	1 Year of Technical Education at Lincoln Community High School (2021-22)
+Interests:
+•	Problem Solving/Data Parsing
+•	Debugging/Feature Testing
+•	Client/Customer Assistance
+References:
+•	Cale Wibben (Company: 217-376-3230)
+•	Rebecca Huddleston (Mobile: 217-691-2956)
+•	Dr. Tokako Soma (Email: tsoma@ic.edu)

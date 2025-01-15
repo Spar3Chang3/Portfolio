@@ -20,7 +20,8 @@ export const IconLinks = {
 
 //needs nuked
 export const SocialLinks = {
-    github: 'https://github.com/Spar3Chang3/Orion-Labs',
+    websiteGit: 'https://github.com/Spar3Chang3/Portfolio',
+    github: 'https://github.com/Spar3Chang3',
     linkedIn: 'https://www.linkedin.com/in/daryk-baker-296886346/'
 }
 
