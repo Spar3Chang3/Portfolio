@@ -9,7 +9,12 @@
     ]);
     let elementRefs = $state([null, null, null]);
 
+    let opacityLevel = $state();
+    let scrollY = $state();
+
     onMount(() => {
+
+        document.title = "Home - Daryk Baker";
 
         const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -38,6 +43,11 @@
            }
         });
 
+        window.addEventListener('scroll', (e) => {
+            scrollY = window.scrollY;
+            opacityLevel = 1 - (Math.min(window.scrollY / window.innerHeight, 1));
+        });
+
         return () => {
             Object.values(elementRefs).forEach(element => {
                 if (element) {
@@ -59,15 +69,34 @@
         flex-direction: column;
 
         min-height: 79.8vh;
-        /*got rid of min-width: 100%, width: 100vw, was a disaster.*/
         max-width: 100%;
 
-        color: var(--text-standard);
+        color: whitesmoke;
         font-family: Roboto, sans-serif;
         overflow: hidden; /*is this needed?*/
+        background-color: #da897a;
 
-        padding: 1rem;
     }
+
+    .intro-background-wrapper {
+        position: absolute;
+        top: -5vh;
+        left: -5vw;
+        height: 105vh;
+        width: 110vw;
+        z-index: 0;
+        filter: blur(10px);
+    }
+
+    .background-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
 
     .name {
         /*#bisexual. Too much? Added this ↴ */
@@ -90,51 +119,35 @@
     .intro {
         position: relative;
         display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: auto auto;
-
-        min-height: 90vh;
-        width: 100%;
-
-        justify-content: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
         align-items: center;
+        width: 100%;
+        gap: 1rem;
 
-
+        padding: 1rem;
     }
 
     .left-top {
-        position: relative;
         display: flex;
-
-        height: 60vh;
-
         justify-content: center;
-        align-items: start;
-
+        align-items: end;
     }
 
     .pfp {
-        max-height: 95%;
-        max-width: 95%;
-
+        max-height: 60vh;
+        max-width: 100%;
         object-fit: contain;
         border-radius: 10%;
     }
 
     .right-bottom {
-        position: relative;
         display: flex;
-        flex-wrap: wrap;
-
-        height: 40vh;
-        width: 100%;
-
-        justify-content: center;
-        align-items: start;
-
+        justify-content: flex-start;
+        align-items: end;
+        height: 100%;
         font-size: 2rem;
         line-height: 2.2rem;
-        margin-bottom: 20vh;
     }
 
     .right-bottom h3 {
@@ -145,17 +158,52 @@
     .interact-tip {
         position: absolute;
 
-        top: 80vh;
+        top: 75vh;
 
         width: 100%;
         height: fit-content;
 
-        font-size: 1.5rem;
+        font-size: 2.5rem;
     }
 
     .interact-tip h3 {
-        animation: gesture 5s infinite ease;
+        animation: gesture 6s infinite ease;
         text-align: center;
+    }
+
+    .spacer {
+        height: 40vh;
+        width: 100vw;
+    }
+
+    .stats-background-wrapper {
+        position: absolute;
+
+        top: 100vh;
+        left: -5vw;
+
+
+        height: 200vh;
+        width: 110vw;
+
+        z-index: 0;
+
+        filter: blur(10px) saturate(75%);
+        background-color: #413a55;
+        animation: colorFlow 8s infinite;
+    }
+
+    .stats-background-overlay {
+        position: relative;
+
+        height: 100%;
+        width: 100%;
+
+        background-image: url('/assets/fog1.png');
+        background-repeat: repeat-y;
+        background-size: 110% 100vh;
+
+        animation: scrollBackground 6s linear infinite;
     }
 
     .stats {
@@ -163,7 +211,7 @@
         display: flex;
         flex-direction: column;
 
-        min-height: 90vh;
+        min-height: 80vh;
         width: 100%;
 
         justify-content: center;
@@ -183,7 +231,7 @@
         opacity: 0;
         height: 4rem;
         font-size: 1.5rem;
-        transition: all 0.5s ease;
+        transition: all 0.8s ease;
     }
 
     .stats-list li:nth-child(2) {
@@ -208,11 +256,12 @@
         display: flex;
         flex-direction: column;
 
-        min-height: 90vh;
+        min-height: 80vh;
         width: 100%;
 
         justify-content: center;
         align-items: center;
+        text-align: center;
 
         font-size: 2rem;
     }
@@ -220,11 +269,15 @@
     .sell-myself-p {
         transform: translateX(-50vw);
         opacity: 0;
-        transition: all 0.5s ease;
+        transition: all 0.8s ease;
     }
 
     .sell-myself-p:nth-child(2) {
-        transition-delay: 1s;
+        transition-delay: 1.5s;
+    }
+
+    .sell-myself b {
+        animation: textFlow 8s linear infinite;
     }
 
 
@@ -242,6 +295,58 @@
         transition-delay: 0s;
     }
 
+    @media only screen and (max-width: 768px) {
+        .name {
+            font-size: clamp(1.8rem, 2rem, 3rem);
+            width: 100%;
+            text-align: center;
+        }
+
+        .intro {
+            grid-template-columns: auto;
+            grid-template-rows: auto auto;
+            padding: 0;
+        }
+
+        .pfp {
+            max-height: 45vh;
+        }
+
+        .left-top {
+            width: 100%;
+        }
+
+        .right-bottom {
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .stats h3 {
+            line-height: 1rem;
+        }
+
+        .stats-list {
+            padding: 1.5rem;
+        }
+
+        .stats-list-item {
+            height: 6rem;
+        }
+    }
+
+    @keyframes colorFlow {
+        0% {
+            background: #da897a;
+        }
+        50% {
+            background: #413a55;
+        }
+        100% {
+            background: #da897a;
+        }
+    }
+
     @keyframes gesture {
         0% {
             transform: translateY(0);
@@ -254,9 +359,43 @@
         }
     }
 
+    @keyframes scrollBackground {
+        0% {
+            background-position: 0 0;
+        }
+        100% {
+            background-position: 0 100vh;
+        }
+    }
+
+    @keyframes textFlow {
+        0% {
+            color: #413a55;
+        }
+        50% {
+            color: #da897a;
+        }
+        100% {
+            color: #413a55;
+        }
+    }
+
 </style>
 
 <section class="home">
+    <div class="intro-background-wrapper"
+         style:opacity={opacityLevel}
+    >
+        <video
+                class="background-video"
+                autoplay
+                loop
+                muted
+                playsinline
+        >
+            <source src="/assets/clouds-broll.mp4" type="video/mp4">
+        </video>
+    </div>
     <div class="name"><h2>Daryk Baker</h2></div>
     <div class="intro">
         <div class="left-top">
@@ -266,8 +405,13 @@
             <h3>A next generation JavaScript developer</h3>
         </div>
     </div>
+
+    <div class="spacer"></div>
     <div class="interact-tip"><h3>&darr;</h3></div>
 
+    <div class="stats-background-wrapper">
+        <div class="stats-background-overlay"></div>
+    </div>
     <div class="stats" id="0" bind:this={elementRefs[0]} data-id="0">
         <h3>Did you know?</h3>
         <ul class="stats-list" id="1" bind:this={elementRefs[1]} data-id="1">

@@ -3,7 +3,7 @@
 
 	let { prefersDarkMode = false } = $props();
 	let githubLogo = $derived((prefersDarkMode ? IconLinks.github.dark : IconLinks.github.light));
-	let uisLogo = $derived((prefersDarkMode ? IconLinks.uis.dark : IconLinks.uis.light));
+	let emailIcon = $derived((prefersDarkMode ? IconLinks.email.dark : IconLinks.email.light));
 
 </script>
 
@@ -43,7 +43,7 @@
 
 	.social-shelf {
 			display: grid;
-			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-template-columns: 1fr 1fr 1fr;
 			grid-template-rows: 1fr;
 			height: 10vh;
       min-height: 50px;
@@ -65,7 +65,7 @@
 			height: 100%;
 			width: 100%;
 			object-fit: contain;
-			transition: 100ms ease;
+			transition: 250ms ease;
 	}
 
 	.social-shelf a > img:hover {
@@ -90,7 +90,6 @@
 
 			.social-shelf {
 					width: 100%;
-
 					justify-items: center;
 			}
 
@@ -112,8 +111,8 @@
 			<img src={IconLinks.linkedIn} alt="LinkedIn Logo"/>
 		</a>
 
-		<a href={SocialLinks.uishome} target="_blank">
-			<img src={uisLogo} alt="UIS Home" />
+		<a href="mailto:darykdbaker@gmail.com" target="_blank">
+			<img src={emailIcon} alt="Email Icon"/>
 		</a>
 	</div>
 </section>

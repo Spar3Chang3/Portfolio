@@ -43,8 +43,8 @@
         --background-standard: #F5F5F5;
         --background-secondary: #FFFFFF;
 
-        --banner-standard: #003366;
-        --banner-accent: #0073e6;
+        --banner-standard: #413a55;
+        --banner-accent: #da897a;
 
         --text-standard: #000000;
         --hyperlink: #c8b18b;
@@ -74,7 +74,7 @@
     main {
         min-height: 79.8vh;
         max-height: fit-content;
-        background-color: var(--background-standard);
+        background: linear-gradient(135deg, #413a55 0%, #da897a 100%);
         overflow-x: hidden;
     }
 

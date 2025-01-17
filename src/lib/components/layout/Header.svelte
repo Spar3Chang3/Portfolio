@@ -93,24 +93,9 @@
 					align-items: center;
 					justify-content: flex-end;
 			}
-			.button-container {
-					position: fixed;
-					padding: 10px;
-					z-index: 100;
+			.navigation a {
+				font-size: clamp(0.8rem, 1rem, 1.5rem);
 			}
-			.nav-vis-button {
-					height: 6vh;
-					width: 6vh;
-
-					background-color: var(--banner-standard);
-          color:whitesmoke;
-					border: 0.1vh solid var(--banner-accent);
-					transition: 50ms ease;
-			}
-			.nav-vis-button:active {
-					background-color: var(--banner-accent);
-					transform: scale(0.90);
-      }
 	}
 
 	@keyframes glitch {
@@ -133,28 +118,6 @@
 			<a href={SiteLinks.about}>About Me</a>
 			<a href={SiteLinks.portfolio}>Portfolio</a>
 			<a href={SiteLinks.contact}>Contact</a>
-		<!--{#if isMobile}-->
-		<!--	<div class="navigation">-->
-		<!--		<div class="button-container">-->
-		<!--			<button class="nav-vis-button" onclick={changeModalState}>☰</button>-->
-		<!--		</div>-->
-		<!--		<div class="navigation-modal">-->
-		<!--			<Modal bind:isOpen={isModalOpen} title={"blank"} showExitButton={false} showTitle={false}>-->
-		<!--				<a href={SiteLinks.about}>About Me</a>-->
-		<!--				<br/>-->
-		<!--				<a href={SiteLinks.portfolio}>portfolio</a>-->
-		<!--				<br/>-->
-		<!--				<a href={SiteLinks.contact}>contact</a>-->
-		<!--			</Modal>-->
-		<!--		</div>-->
-		<!--	</div>-->
-		<!--{:else}-->
-		<!--	<div class="navigation">-->
-		<!--		<a href={SiteLinks.landingPage}>Home</a>-->
-		<!--		<a href={SiteLinks.about}>About Me</a>-->
-		<!--		<a href={SiteLinks.portfolio}>Portfolio</a>-->
-		<!--		<a href={SiteLinks.contact}>Contact</a>-->
-		<!--	</div>-->
-		<!--{/if}-->
+		</div>
 	</div>
 </section>

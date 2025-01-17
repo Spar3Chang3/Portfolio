@@ -4,15 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5387132-8f34-4aef-87d0-d2d0e2853228" name="Changes" comment="Initial Commit">
-      <change afterPath="$PROJECT_DIR$/src/routes/about/+page.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/contact/+page.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/temp/resume-points.txt" afterDir="false" />
+    <list default="true" id="a5387132-8f34-4aef-87d0-d2d0e2853228" name="Changes" comment="Work on about me, update header/footer">
+      <change afterPath="$PROJECT_DIR$/BuildAndDeployWindows.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/clouds-broll.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/clouds-broll.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/discord-logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/email-icon-dark.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/email-icon-light.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fb-logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fog1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/components/layout/Footer.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/layout/Footer.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/components/layout/Header.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/layout/Header.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/+layout.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/+layout.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/about/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/about/+page.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/contact/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/contact/+page.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/home/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/home/+page.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/portfolio/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/portfolio/+page.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/favicon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/svelte.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/svelte.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,24 +35,25 @@
       <list>
         <option value="+layout" />
         <option value="+page" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Spar3Chang3"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Spar3Chang3&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Spar3Chang3/Portfolio",
-    "accountId": "7398f066-a024-4eda-a6df-e25fa531bd3e"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Spar3Chang3/Portfolio&quot;,
+    &quot;accountId&quot;: &quot;7398f066-a024-4eda-a6df-e25fa531bd3e&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -54,9 +66,11 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/trash/WebstormProjects/Portfolio",
+    "last_opened_file_path": "C:/Users/trash/WebstormProjects/Portfolio/static/assets",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -69,6 +83,7 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\trash\WebstormProjects\Portfolio\static\assets" />
+      <recent name="C:\Users\trash\WebstormProjects\Portfolio" />
       <recent name="C:\Users\trash\WebstormProjects\Portfolio\static" />
       <recent name="C:\Users\trash\WebstormProjects\Portfolio\src\lib\components\layout" />
     </key>
@@ -95,7 +110,8 @@
       <workItem from="1736911997467" duration="12072000" />
       <workItem from="1736925108966" duration="2309000" />
       <workItem from="1736951483255" duration="553000" />
-      <workItem from="1736952566835" duration="4087000" />
+      <workItem from="1736952566835" duration="4210000" />
+      <workItem from="1737012345482" duration="33929000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -105,7 +121,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736953252821</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Work on about me, update header/footer">
+      <option name="closed" value="true" />
+      <created>1736956759383</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1736956759383</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,6 +137,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
+    <MESSAGE value="Work on about me, update header/footer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Work on about me, update header/footer" />
   </component>
 </project>

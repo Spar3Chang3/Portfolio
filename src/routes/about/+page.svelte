@@ -1,5 +1,10 @@
 <script lang="js">
+    import { onMount } from 'svelte';
+    import { IconLinks } from '$lib/index.js';
 
+    onMount(() => {
+        document.title = "About Me - Daryk Baker";
+    });
 </script>
 <style lang="css">
     .about {
@@ -12,7 +17,7 @@
 
         align-items: center;
 
-        color: var(--text-standard);
+        color: whitesmoke;
         font-family: Roboto, sans-serif;
     }
 
@@ -23,7 +28,7 @@
         font-size: 4rem;
     }
 
-    .summary, .education, .skills, .experience {
+    .summary, .education, .skills, .experience, .goals {
         height: fit-content;
         width: 95%;
 
@@ -34,6 +39,40 @@
 
     .education, .skills {
         line-height: 2rem;
+    }
+
+    .experience img {
+        min-height: 10vh;
+        min-width: 10vh;
+
+        max-height: 10rem;
+        max-width: 10rem;
+
+        object-fit: contain;
+    }
+
+    .languages, .frameworks {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        height: fit-content;
+        width: 95%;
+
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+
+        padding: 1rem;
+        border-radius: 25px;
+
+        background-color: var(--banner-standard);
+    }
+
+    .languages h4, .frameworks h4 {
+        width: 100%;
+        height: fit-content;
     }
 
 </style>
@@ -78,8 +117,34 @@
         </ul>
     </div>
 
+    <div class="goals">
+        <h3>Goals</h3>
+        <p>
+            I aspire to reach senior developer status through schooling, working, and self-fulfillment.
+        </p>
+        <p>
+            To do this I try to learn at least one new thing each day. My intent is to be flexible and always open to new implementations.
+        </p>
+        <p>
+            Whether I am placed by my self, with a team, or simply as a code reviewer, I will always work to both my own and my employer's satisfaction.
+        </p>
+    </div>
+
     <div class="experience">
         <h3>Experience</h3>
-        <!-- TODO: get pictures for the languages I know. -->
+        <div class="languages">
+            <h4>Languages</h4>
+            <img src={IconLinks.html} alt="Logo of HTML 5"/>
+            <img src={IconLinks.css} alt="Logo of CSS"/>
+            <img src={IconLinks.js} alt="Logo of JavaScript"/>
+            <img src={IconLinks.java} alt="Logo of Java"/>
+            <img src={IconLinks.go} alt="Logo of GoLang"/>
+        </div>
+        <br/>
+        <div class="frameworks">
+            <h4>Frameworks</h4>
+            <img src={IconLinks.react} alt="Logo of the React framework"/>
+            <img src={IconLinks.svelte} alt="Logo of the Svelte Framework"/>
+        </div>
     </div>
 </section>
